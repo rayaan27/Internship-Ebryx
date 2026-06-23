@@ -1,0 +1,20 @@
+
+DAY 1 — [Date]
+
+TOPICS COVERED:
+- What is ML, Types of ML (Supervised, Unsupervised)
+- ML Workflow: Problem Definition → Data Collection → Preprocessing → Model Training → Evaluation → Deployment
+- Bias-Variance Tradeoff
+- Overfitting vs Underfitting
+- Gradient Descent (Batch, SGD, Mini-batch)
+- Evaluation Metrics: Accuracy, Precision, Recall, F1, MSE, R²
+
+RESOURCES READ:
+- What is ML + Types: https://machinelearningmastery.com/types-of-learning-in-machine-learning/
+- ML Workflow: https://medium.com/@regansomi/a-guide-to-machine-learning-workflow-9a4302b8787e
+- Bias-Variance Tradeoff: http://scott.fortmann-roe.com/docs/BiasVariance.html
+- Overfitting vs Underfitting: https://machinelearningmastery.com/overfitting-and-underfitting-with-machine-learning-algorithms/
+- Gradient Descent: https://machinelearningmastery.com/gradient-descent-for-machine-learning/
+- Classification Metrics: https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9
+- Regression Metrics: https://machinelearningmastery.com/regression-metrics-for-machine-learning/
+
