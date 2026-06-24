@@ -1,0 +1,31 @@
+Week 2 full theory pass — read through classification algorithms, preprocessing
+concepts, and pipeline structure. Went deeper on kNN internals than planned
+
+Resources used:
+- scikit-learn docs: kNN, cross-validation,feature selection
+- DataCamp: decision trees, preprocessing
+- ml-cheatsheet: decision tree intuition
+
+What I actually did:
+Went through decision trees, kNN. Spent more time
+than expected on kNN — ended up going through brute force, kd-tree, and ball tree
+in detail including how ball tree builds its structure and computes centroids at
+each node. Understood the pruning logic and why it matters at scale even if
+Titanic is too small to see the difference.
+
+Cleared up the classifier vs regressor distinction — output type drives the choice,
+not the algorithm. Also worked through what max_depth, min_samples_split, and
+min_samples_leaf actually do to a tree rather than just knowing they exist.
+
+Hands-on:
+Set up venv in VS Code with all Week 2 dependencies. Wrote knn notebook using
+real Titanic train.csv — covered preprocessing, stratified split, scaling, and
+ran all three kNN algorithms side by side. Confirmed all three produce identical
+accuracy, timing differences only show at scale. Pushed notebook to existing
+GitHub repo.
+
+Results:
+- kNN accuracy on Titanic (k=5): ~70%
+- k=11 outperformed k=5 noticeably
+- class imbalance visible in confusion matrix, noted for capstone
+
