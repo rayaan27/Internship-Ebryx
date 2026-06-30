@@ -1,1 +1,26 @@
 
+Topics covered:
+- K-Means clustering and hierarchical clustering with dendrograms
+- Silhouette analysis for evaluating cluster quality
+
+Resources:
+- https://machinelearningmastery.com/the-beginners-guide-to-clustering-with-python/
+- https://machinelearningmastery.com/k-means-cluster-evaluation-with-silhouette-analysis/
+
+Hands-on:
+- Implemented K-Means and Agglomerative Clustering on the Mall Customer
+  Segmentation dataset
+- Scaled Income and Spending Score features using StandardScaler since
+  both methods are distance-based
+- Ran the Elbow Method, tracking K-Means inertia across K=1 to 10
+- Plotted a dendrogram using Ward linkage to inspect the merge structure
+- Used Silhouette Score across K=2 to 10 to pick a concrete K rather than
+  relying on the elbow plot alone
+- Visualized clusters with 2D Plots
+- Built a side-by-side comparison of K-Means vs hierarchical clustering
+  on the same K
+
+Result:
+Clustering implemented end to end in a notebook - data load, scaling,
+elbow, silhouette, final K-Means model, dendrogram, final hierarchical
+model, comparison.
