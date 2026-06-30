@@ -1,1 +1,24 @@
 
+
+What I actually did:
+Today was all execution. Theory was done yesterday so the focus shifted to
+getting the three classifiers running properly end to end. Ran Decision Tree,
+kNN, and Naive Bayes on Titanic, Wine, and Breast Cancer datasets. Titanic was
+already preprocessed from yesterday so Wine and Breast Cancer were quicker —
+both load directly from sklearn so no manual cleaning needed.
+
+Built a pipeline for each classifier wrapping StandardScaler with the model.
+Kept the structure consistent across all three so comparison was clean.
+Plotted confusion matrices for each model across each dataset. Decision Tree
+needed max_depth tuning — without it confusion matrix showed clear overfitting.
+kNN settled on k=7 after testing a range. Naive Bayes needed the least tuning,
+ran well out of the box on all three datasets.
+
+Wrote the performance comparison summary covering accuracy, F1 score, and
+confusion matrix observations for each model. Noted where class imbalance
+affected results and flagged Titanic specifically for the capstone.
+
+Hands-on:
+- Full pipeline: StandardScaler + DecisionTree, kNN, NaiveBayes
+- Confusion matrices visualized with seaborn heatmaps
+- Metrics comparison table: accuracy and F1 across all three classifiers
