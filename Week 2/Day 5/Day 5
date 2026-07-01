@@ -1,1 +1,28 @@
+Today I studied PCA in depth — how it finds directions of maximum variance,
+projects data onto new axes called principal components, and reduces
+dimensionality by keeping only the top N components while discarding noise.
 
+Also worked through when PCA is needed — curse of dimensionality,
+correlated/redundant features — and the key distinction between:
+- PCA before clustering (preprocessing)
+- PCA after clustering (visualization only)
+
+Started with the Credit Card dataset (CC GENERAL.csv, 17 features) for the
+PCA-first strategy. Problem: PCA produced 8 components before hitting 85%
+variance, so clustering happened in 8D and the scatter plot was still
+an approximation showing only PC1 and PC2.
+
+Switched to Country Socioeconomic dataset (Country-data.csv, 9 features)
+where GDP, income, health spending, child mortality and life expectancy are
+strongly correlated. PCA compressed these down to 2-3 components capturing
+75-85%+ variance, meaning clustering happened directly in 2D/3D PCA space
+and the scatter plot is a perfectly accurate picture of the clustering —
+no gap between clustering space and visualization space.
+
+Extended the scatter plot to 3D using projection='3d' and ax.scatter with
+three PC coordinate arrays. The 3D plot is interactive and rotatable in
+VS Code/Jupyter for better cluster inspection.
+
+Datasets:
+- Credit Card: https://www.kaggle.com/datasets/arjunbhasin2013/ccdata
+- Country Socioeconomic: https://www.kaggle.com/datasets/rohan0301/unsupervised-learning-on-country-data
