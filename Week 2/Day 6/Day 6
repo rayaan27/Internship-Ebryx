@@ -1,1 +1,15 @@
+Today was mostly a planning and concept-clarification session rather than hands-on coding, so this log reflects that.
+
+Spent today refining the direction for my Week 4 capstone project.
+Moved away from the earlier Telco Churn idea and explored a text-based Spam Detection (TF-IDF + Naive Bayes) alternative, but worked through why clustering on raw TF-IDF vectors is problematic due to high dimensionality and sparsity, especially on a small dataset.
+Went back and forth on whether PCA or TruncatedSVD is more appropriate for sparse text data, and understood the trade-offs of using PCA anyway on a smaller dataset.
+
+Settled on a tabular, numeric-heavy dataset direction instead, since it fits the clustering-plus-classification workflow more cleanly without the text-preprocessing complications.
+Clarified that the dataset itself is generalized/likely US-based, not Pakistan-specific, and decided to be upfront about that in the write-up rather than overclaiming direct regional applicability. The methodology is what's meant to be transferable, not the trained model itself.
+
+Worked out the full pipeline structure: K-Means clustering on scaled numeric features to generate a Cluster_ID, which then gets combined with the main features as an engineered input for classification.
+Compared Logistic Regression vs Random Forest for this use case. Random Forest likely wins on raw performance, but Logistic Regression has a real edge in interpretability, which matters for a lending-decision context.
+Decided to deploy Logistic Regression as the live Streamlit model specifically so I can show per-prediction coefficient contributions, i.e. which features pushed a specific person's prediction up or down, not just a final probability.
+
+Finalized the Streamlit structure as three pages: live prediction with feature contribution breakdown, a cluster visualization page with PCA used only for 2D plotting, and a model comparison page with metrics across classifiers.
 
