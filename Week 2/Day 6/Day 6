@@ -13,3 +13,8 @@ Decided to deploy Logistic Regression as the live Streamlit model specifically s
 
 Finalized the Streamlit structure as three pages: live prediction with feature contribution breakdown, a cluster visualization page with PCA used only for 2D plotting, and a model comparison page with metrics across classifiers.
 
+Also worked through how hyperparameter tuning applies differently across this pipeline.
+Confirmed GridSearchCV/RandomizedSearchCV is meant for supervised models with a labeled target, so it applies to the classifiers, not to K-Means directly, since clustering has no accuracy label to optimize against. Elbow Method and Silhouette Score remain the right approach for picking K, same as earlier notebooks.
+Went over realistic tuning grids for each classifier under consideration, Logistic Regression (C, penalty, solver), Random Forest (n_estimators, max_depth, min_samples_split), and noted class_weight='balanced'.
+Planned to compare pre-tuning vs post-tuning scores for whichever models I finalize, to actually demonstrate tuning improved performance rather than just reporting the best parameters found.
+
